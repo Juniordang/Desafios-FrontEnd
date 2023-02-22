@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+}
+/* font */
+@font-face {
+    font-family: 'Hanken Grotesk';
+    src: url('assets/fonts/static/HankenGrotesk-Medium.ttf'),
+    url('assets/fonts/static/HankenGrotesk-Bold.ttf'),
+    url('assets/fonts/static/HankenGrotesk-ExtraBold.ttf'),url('assets/fonts/HankenGrotesk-VariableFont_wght.ttf');
+    font-style: normal;
+}
+/* variables */
+:root {
+    font-size: 62.5%;
+    --font: 'Hanken Grotesk';
+    --light-red: hsl(0, 100%, 67%);
+    --orange-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+    --bg-color: linear-gradient(to bottom,hsl(252, 100%, 67%) 5%,hsl(241, 81%, 54%) );
+    --circle-color: linear-gradient(93deg,hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+/* generics */
+ul {
+    list-style: none;
+}
+body {
+    /* background-color: var(--pale-blue); */
+    font-family: var(--font);
+    font-size: 1.8rem;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
+}
+#summary,#result {
+    box-shadow: 2px 1px 7px 0px rgba(0, 0, 0, 0.495);
+    height: 38.8rem;
+}
+#result {
+    background-image: var(--bg-color);
+    width: 26rem;
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 2rem;
+    border-radius: 2rem 0rem 0.6rem 2rem;
+}
+#result h1 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--light-lavender);
+    padding: 2rem 1rem;
+}
+.info {
+    width: 15rem;
+    height: 15rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-image: var(--circle-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.info p {
+    font-size: 6rem;
+    font-weight: 700;
+}
+.info span {
+    font-size: 1.5rem;
+    color: var(--light-lavender);
+}
+#result .text div {
+    font-size: 2.4rem;
+    margin: 2rem 1rem;
+}
+.text p {
+    font-size: 1.4rem;
+    color: var(--light-lavender);
+    padding: 0rem 1rem 2rem;
+}
+/* summary */
+#summary {
+    width: 27rem;
+    border-radius: 0rem 2rem 2rem 0.6rem;
+    padding: 1.5rem 2rem;
+   
+    background-color: var(--white);
+}
+#summary h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--dark-gray-blue);
+    padding: 2rem 1rem;
+}
+ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-radius: .7rem;
+}
+.reaction {
+    color: var(--light-red);
+    background-color: hsla(0, 100%, 67%, 0.142);
+}
+.memory {
+    color: var(--orange-yellow);
+    background-color: hsla(39, 100%, 56%, 0.137);
+}
+.verbal {
+    color: var(--green-teal);
+    background-color: hsla(166, 100%, 37%, 0.15);
+}
+.visual {
+    color: var(--cobalt-blue);
+    background-color: hsla(234, 85%, 45%, 0.145);
+}
+ul li p {
+    color: var(--dark-gray-blue);
+}
+ul li p span {
+    color: var(--light-lavender);
+}
+ul li span.icon {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+/* button */
+button {
+    font-family: var(--font);
+    font-size: 1.8rem;
+    color: var(--white);
+    background-color: var(--dark-gray-blue);
+    padding: 1rem 8rem;
+    margin-top: 2rem;
+    border: none;
+    border-radius: 2rem;
+    transition: background .2s;
+}
+button:hover {
+    background-color:hsl(225, 28%, 22%);
+}
